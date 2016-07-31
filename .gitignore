@@ -1,0 +1,3 @@
+*.py[cdo]
+.py35
+db.sqlite3
