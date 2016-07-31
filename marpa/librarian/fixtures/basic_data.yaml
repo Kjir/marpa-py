@@ -1,0 +1,40 @@
+- model: librarian.book
+  pk: 1
+  fields: {title: The turn of the screw, pages: 124, published_on: 2016-07-22}
+- model: librarian.book
+  pk: 2
+  fields: {title: On the road, pages: 1446, published_on: 2016-07-22}
+- model: librarian.book
+  pk: 3
+  fields: {title: The Lord of the Rings, pages: 2385, published_on: 2016-07-22}
+- model: librarian.patron
+  pk: 1
+  fields:
+    first_name: 'Eddie'
+    last_name: 'Van Halen'
+- model: librarian.patron
+  pk: 2
+  fields:
+    first_name: 'Angus'
+    last_name: 'Young'
+- model: librarian.loan
+  pk: 1
+  fields:
+    rent_date: '2016-06-21'
+    due_date: '2016-07-19'
+    patron_id: 1
+    book_id: 3
+- model: librarian.loan
+  pk: 2
+  fields:
+    rent_date: '2016-07-25'
+    due_date: '2016-10-01'
+    patron_id: 2
+    book_id: 1
+- model: librarian.loan
+  pk: 3
+  fields:
+    rent_date: '2016-07-01'
+    due_date: '2016-08-22'
+    patron_id: 2
+    book_id: 2

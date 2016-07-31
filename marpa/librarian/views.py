@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from marpa.librarian.serializers import UserSerializer, GroupSerializer, BookSerializer
-from marpa.librarian.models import Book
+from marpa.librarian.serializers import UserSerializer, GroupSerializer, BookSerializer, PatronSerializer, LoanSerializer
+from marpa.librarian.models import Book, Patron, Loan
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -25,3 +25,17 @@ class BookViewSet(viewsets.ModelViewSet):
     """
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+
+class PatronViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint to retrieve list of patrons
+    """
+    queryset = Patron.objects.all()
+    serializer_class = PatronSerializer
+
+class LoanViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint to retrieve list of loans
+    """
+    queryset = Loan.objects.all()
+    serializer_class = LoanSerializer
